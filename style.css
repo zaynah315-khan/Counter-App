@@ -1,0 +1,483 @@
+  /* ==========================
+        Google Font
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================
+          Body
+========================== */
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#FFF9C4,#FFD54F,#FFB300);
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+/* ==========================
+      Background Glow
+========================== */
+
+.background{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top left,rgba(255,255,255,.7),transparent 40%),
+    radial-gradient(circle at bottom right,rgba(255,255,255,.4),transparent 35%);
+
+    filter:blur(10px);
+
+}
+
+/* ==========================
+          Card
+========================== */
+
+.card{
+
+    position:relative;
+    z-index:2;
+
+    width:min(90vw,470px);
+
+    padding:35px 30px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.22);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    text-align:center;
+
+    box-shadow:
+    0 18px 45px rgba(255,180,0,.25),
+    0 8px 25px rgba(255,255,255,.35);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ==========================
+          Heading
+========================== */
+
+h1{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:#F57C00;
+
+}
+
+.subtitle{
+
+    margin-top:8px;
+
+    margin-bottom:28px;
+
+    color:#6C5321;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+/* ==========================
+      Counter Circle
+========================== */
+
+.counter-circle{
+
+    width:180px;
+
+    height:180px;
+
+    margin:0 auto 30px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    background:rgba(255,255,255,.55);
+
+    border:5px solid #FFC107;
+
+    box-shadow:
+    0 0 30px rgba(255,193,7,.35),
+    inset 0 0 18px rgba(255,255,255,.9);
+
+    transition:.3s;
+
+}
+
+.counter-circle:hover{
+
+    transform:scale(1.04);
+
+}
+
+#counter-display{
+
+    font-size:58px;
+
+    font-weight:700;
+
+    color:#222;
+
+    line-height:1.2;
+
+    text-align:center;
+
+    transition:all .3s ease;
+
+}
+
+.counter-circle p{
+
+    margin-top:6px;
+
+    font-size:15px;
+
+    letter-spacing:5px;
+
+    color:#777;
+
+}
+
+/* ==========================
+         Button
+========================== */
+
+#my-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-top:10px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(to right,#FFC107,#FF9800);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 22px rgba(255,152,0,.35);
+
+}
+
+#my-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 16px 28px rgba(255,152,0,.45);
+
+}
+
+#my-btn:active{
+
+    transform:scale(.96);
+
+}
+
+/* ==========================
+      Message Box
+========================== */
+
+.message-box{
+
+    margin-top:20px;
+
+    min-height:60px;
+
+    padding:15px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.45);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    color:#666;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.message-box.active{
+
+    background:linear-gradient(135deg,#FFB300,#FF9800);
+
+    color:white;
+
+    font-weight:600;
+
+    box-shadow:0 8px 20px rgba(255,152,0,.35);
+
+    animation:pop .4s ease;
+
+}
+
+/* ==========================
+      Special Numbers
+========================== */
+
+.special-box{
+
+    margin-top:25px;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.35);
+
+    border:1px solid rgba(255,255,255,.5);
+
+}
+
+.special-box h3{
+
+    color:#F57C00;
+
+    font-size:22px;
+
+    margin-bottom:18px;
+
+}
+
+.special-box p{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-bottom:15px;
+
+}
+
+.special-box span{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(#FFD54F,#FFA000);
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+    box-shadow:0 8px 18px rgba(255,193,7,.35);
+
+}
+
+.special-box span:hover{
+
+    transform:scale(1.1);
+
+}
+
+.special-box small{
+
+    display:block;
+
+    color:#666;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+/* ==========================
+        Animations
+========================== */
+
+@keyframes pop{
+
+0%{
+
+transform:scale(.8);
+
+opacity:0;
+
+}
+
+70%{
+
+transform:scale(1.05);
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+/* ==========================
+      Responsive
+========================== */
+
+@media(max-width:768px){
+
+.card{
+
+width:90%;
+
+padding:30px 22px;
+
+}
+
+h1{
+
+font-size:32px;
+
+}
+
+.counter-circle{
+
+width:160px;
+
+height:160px;
+
+}
+
+#counter-display{
+
+font-size:48px;
+
+}
+
+#my-btn{
+
+font-size:17px;
+
+}
+
+.special-box span{
+
+width:45px;
+
+height:45px;
+
+font-size:18px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.card{
+
+padding:25px 18px;
+
+}
+
+.counter-circle{
+
+width:145px;
+
+height:145px;
+
+}
+
+#counter-display{
+
+font-size:42px;
+
+}
+
+.subtitle{
+
+font-size:14px;
+
+}
+
+.special-box h3{
+
+font-size:20px;
+
+}
+
+}
